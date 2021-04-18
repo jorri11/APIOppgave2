@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5wVX1JqAN1e1NohRqR9kt4TOpczV16rbCqHueqy70jde4GYlK828at5CkHJpkB7Gy33WpB5cX4mi+hQeOgmd2Q==",
+  "dgSpecHash": "574rqoiB5xDsVF7cZ8z0nwx3vwG75lDyIbbyItImAGRYOw+EWPoStWlfprlLaFQKs37REtJ0eawr4HCQdwqgng==",
   "success": true,
-  "projectFilePath": "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\HackathonAPI.csproj",
+  "projectFilePath": "D:\\Programmering\\APIOppgave2\\HackathonAPI\\HackathonAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jorge\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\jorge\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",

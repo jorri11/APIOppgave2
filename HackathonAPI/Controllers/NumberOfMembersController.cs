@@ -15,12 +15,13 @@ namespace HackathonAPI.Controllers
     [ApiController]
     public class NumberOfMembersController : ControllerBase
     {
+        dbStuff db = new dbStuff();
         [HttpGet]
         public ActionResult<NumberOfMembers> Get()
         {
             try
             {
-                int numberOfMembers = dbStuff.getNumberOfMembers();
+                int numberOfMembers = db.getNumberOfMembers();
                 return Ok(new NumberOfMembers { numberOfMembers = numberOfMembers });
             }
             catch (Exception)

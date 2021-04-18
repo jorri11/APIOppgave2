@@ -11,6 +11,7 @@ namespace HackathonAPI.Controllers
     [ApiController]
     public class MemberMajorController : ControllerBase
     {
+        dbStuff db = new dbStuff();
         [HttpPut("{id}")]
         public ActionResult Put(long id, Members members)
         {
@@ -21,7 +22,7 @@ namespace HackathonAPI.Controllers
             try
             {
                 string query = $"update medlemmer SET studie = '{members.Major}' WHERE id = {id}";
-                dbStuff.updateDB(query);
+                db.updateDB(query);
                 return NoContent();
             }
             catch (Exception)
@@ -34,10 +35,10 @@ namespace HackathonAPI.Controllers
         {
             try
             {
-                int DATAINGs = dbStuff.getNumberOfMajorStudents(majors.DATAING);
-                int total = dbStuff.getNumberOfMembers();
-                //int percentage = DATAINGs / total;
-                return Ok(DATAINGs);
+                float DATAINGs =(float)db.getNumberOfMajorStudents(majors.DATAING);
+                float total = (float)db.getNumberOfMembers();
+                float percentage = (DATAINGs / total)*100;
+                return Ok(percentage);
             }
             catch (Exception)
             {
@@ -47,7 +48,7 @@ namespace HackathonAPI.Controllers
     }
     public class PercentOfDATAING
     {
-        public int percentageOfDATAING { get; set; }
+        public float percentageOfDATAING { get; set; }
     }
     public enum majors
     {

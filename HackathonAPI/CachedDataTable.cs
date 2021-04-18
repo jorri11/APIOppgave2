@@ -8,15 +8,15 @@ namespace HackathonAPI
 {
     public class CachedDataTable
     {
-        private static DataTable table;
-        private static DateTime lastUpdated;
+        private DataTable table;
+        private  DateTime lastUpdated;
         private TimeSpan timeNeededForUpdate = TimeSpan.FromMinutes(5);
-        private static bool needsUpdate = true;
+        private bool needsUpdate = true;
         public CachedDataTable()
         {
             table = new DataTable();
         }
-        public static void updateDataTable(DataTable dt)
+        public void updateDataTable(DataTable dt)
         {
             table = dt;
             lastUpdated = DateTime.Now;

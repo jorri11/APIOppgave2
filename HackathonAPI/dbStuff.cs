@@ -9,8 +9,11 @@ namespace HackathonAPI
 {
     public class dbStuff
     {
-
-        private static MySqlConnection connectdb()
+        private static CachedDataTable birtYearsCdt= new CachedDataTable();
+        private static CachedDataTable membersCdt= new CachedDataTable();
+        private static CachedDataTable majorsCdt= new CachedDataTable(); 
+        
+        private MySqlConnection connectdb()
         {
             MySqlConnection conn;
             string myConnectionString;
@@ -30,7 +33,7 @@ namespace HackathonAPI
             }
         }
 
-        public static void updateDB(string query)
+        public void updateDB(string query)
         {
             MySqlConnection conn = connectdb();
             try
@@ -48,7 +51,7 @@ namespace HackathonAPI
             conn.Close();
         }
 
-        private static DataTable executeQuery(string query)
+        private DataTable executeQuery(string query)
         {
             DataTable dt = new DataTable();
             MySqlConnection conn = connectdb();
@@ -68,7 +71,7 @@ namespace HackathonAPI
                 throw new Exception();
             }
         }
-        private static CachedDataTable executeQuery(string query, CachedDataTable cdt)
+        private CachedDataTable executeQuery(string query, CachedDataTable cdt)
         {
             
             //DataTable dt = new DataTable();
@@ -99,9 +102,8 @@ namespace HackathonAPI
         }
 
 
-        private static CachedDataTable membersCdt = new CachedDataTable();
 
-        public static int getNumberOfMembers()
+        public int getNumberOfMembers()
         {
             //DataTable dt;
             string query = "select count(*) from medlemmer";
@@ -119,7 +121,7 @@ namespace HackathonAPI
         }
 
 
-        public static int getNumberOfMajorStudents(Controllers.majors major)
+        public int getNumberOfMajorStudents(Controllers.majors major)
         {
             string query = $"select count(*) from medlemmer where studie='{major.ToString()}'";
             try
@@ -135,10 +137,9 @@ namespace HackathonAPI
             }
         }
 
-        private static CachedDataTable majorsCdt = new CachedDataTable();
-        private static CachedDataTable birtYearsCdt = new CachedDataTable();
+        
 
-        public static int getAvreageAge()
+        public int getAvreageAge()
         {
             int currentYear = DateTime.Now.Year;
             //DataTable dt;

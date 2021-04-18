@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\HackathonAPI.csproj": {}
+    "D:\\Programmering\\APIOppgave2\\HackathonAPI\\HackathonAPI.csproj": {}
   },
   "projects": {
-    "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\HackathonAPI.csproj": {
+    "D:\\Programmering\\APIOppgave2\\HackathonAPI\\HackathonAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\HackathonAPI.csproj",
+        "projectUniqueName": "D:\\Programmering\\APIOppgave2\\HackathonAPI\\HackathonAPI.csproj",
         "projectName": "HackathonAPI",
-        "projectPath": "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\HackathonAPI.csproj",
+        "projectPath": "D:\\Programmering\\APIOppgave2\\HackathonAPI\\HackathonAPI.csproj",
         "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "D:\\KodeProsjekter\\HackathonAPI\\HackathonAPI\\obj\\",
+        "outputPath": "D:\\Programmering\\APIOppgave2\\HackathonAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

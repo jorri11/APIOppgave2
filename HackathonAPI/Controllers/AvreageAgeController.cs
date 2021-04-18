@@ -12,12 +12,13 @@ namespace HackathonAPI.Controllers
     [ApiController]
     public class AvreageAgeController : ControllerBase
     {
+        dbStuff db = new dbStuff();
         [HttpGet]
         public ActionResult<AvreageAge> Get()
         {
             try
             {
-                return Ok(dbStuff.getAvreageAge());
+                return Ok(db.getAvreageAge());
             }
             catch (Exception)
             {
