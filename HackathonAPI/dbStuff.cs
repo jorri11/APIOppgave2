@@ -47,7 +47,7 @@ namespace HackathonAPI
             {
                 throw;
             }
-
+            majorsCdt.NeedsUpdate = true;//Since we update the table, the cahced info in this table wil be outdated
             conn.Close();
         }
 
@@ -77,6 +77,7 @@ namespace HackathonAPI
             //DataTable dt = new DataTable();
             if (cdt.NeedsUpdate)
             {
+                cdt.Table.Clear();
                 MySqlConnection conn = connectdb();
                 try
                 {
@@ -84,7 +85,7 @@ namespace HackathonAPI
                     conn.Open();
                     using (MySqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        cdt.Table.Load(rdr, LoadOption.OverwriteChanges);
+                        cdt.Table.Load(rdr);
                     }
                     cdt.LastUpdated = DateTime.Now;
                     conn.Close();
